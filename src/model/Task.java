@@ -1,4 +1,10 @@
+package model;
+
+import javax.swing.*;
+
 public class Task {
+
+    private int id;
 
     private String text;
 
@@ -7,6 +13,20 @@ public class Task {
     public Task (final String text) {
         this.text = text;
         done = false;
+    }
+
+    public Task (final int id, String text, boolean done) {
+        this.id = id;
+        this.text = text;
+        this.done = done;
+    }
+
+    public void setId (final int editedId) {
+        id = editedId;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public void setText(final String editedText) {
@@ -24,4 +44,5 @@ public class Task {
     public boolean isDone() {
         return done;
     }
+
 }
